@@ -63,6 +63,9 @@ implementation(kotlin("reflect"))
 testImplementation(kotlin("test"))
 testImplementation(kotlin("test-junit"))
 
+testFixturesApi("org.apache.commons:commons-lang3:3.9")
+testFixturesImplementation("org.apache.commons:commons-text:1.6")
+
 include(":app", ":diffutils")
 
 include(
