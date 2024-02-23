@@ -28,6 +28,7 @@ dependencies {
   val testing = "1.0.2"
   implementation(rootProject.deps.androidPagingComponent)
   implementation(project(":customer-api")) // comment!
+  implementation(project(path = ":customer-api:api"))
   kapt(project(":epoxy-processor"))
   implementation(":epoxy-annotations")
   val ANDROIDX_APPCOMPAT = "1.0.0"

@@ -422,7 +422,7 @@ fun String.addParentheses(): String {
 // becomes
 // id("io.gitlab.arturbosch.detekt") version "1.0.0.RC8"
 fun String.addParenthesisToId(): String {
-    
+
     // this will only catch id "..." version ..., should skip id("...")
     // should get the id "..."
     val idExp = "(id)\\s*\"(.*?)\"".toRegex()
@@ -704,7 +704,7 @@ fun String.convertPluginsIntoOneBlock(): String {
 fun String.replaceColonWithEquals(): String {
 
     // this get "group:"
-    val expression = "\\w*:\\s*\".*?\"".toRegex()
+    val expression = "(\\(|\\,)[\\s]*[\\w]+:".toRegex()
 
     return this.replace(expression) {
         it.value.replace(":", " =")
