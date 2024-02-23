@@ -251,7 +251,7 @@ fun String.convertCompileToImplementation(): String {
 // implementation(":epoxy-annotations")
 fun String.convertDependencies(): String {
 
-    val testKeywords = "testImplementation|androidTestImplementation|debugImplementation|releaseImplementation|compileOnly|testCompileOnly|runtimeOnly|developmentOnly"
+    val testKeywords = "testImplementation|androidTestImplementation|debugImplementation|releaseImplementation|compileOnly|testCompileOnly|runtimeOnly|developmentOnly|testFixturesImplementation|testFixturesApi"
     val gradleKeywords = "($testKeywords|implementation|api|annotationProcessor|classpath|kaptTest|kaptAndroidTest|kapt|check|ksp|coreLibraryDesugaring|detektPlugins|lintPublish|lintCheck)".toRegex()
 
 
